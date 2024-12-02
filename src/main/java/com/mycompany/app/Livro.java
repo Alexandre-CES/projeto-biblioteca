@@ -1,3 +1,5 @@
+package com.mycompany.app;
+
 public class Livro{
     private String titulo;
     private Autor autor;
@@ -44,7 +46,7 @@ public class Livro{
         if(this.isDisponivel()){
             System.out.println("the book is avaible");
         }else{
-            System.out.println("the book not is avaible");
+            System.out.println("the book is not avaible");
         }
     }
 }

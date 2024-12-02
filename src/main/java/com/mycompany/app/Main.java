@@ -1,3 +1,4 @@
+package com.mycompany.app;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
