@@ -1,9 +1,10 @@
 package com.mycompany.app;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Usuario extends Pessoa{
   private int idade;
-  private Emprestimo[] historicoEmprestimos;
+  private List<Emprestimo> historicoEmprestimos = new ArrayList<>();
 
   //constructor
   public Usuario(String nome, int idade){
@@ -28,12 +29,16 @@ public class Usuario extends Pessoa{
     return this.idade;
   } 
   
-  public Emprestimo[] getHistoricoEmprestimos(){
+  public List<Emprestimo> getHistoricoEmprestimos(){
     return this.historicoEmprestimos;
   }
 
   //setters
   public void setMaxLivrosEmprestados(int quantidade){
     super.setQuantidadeMaxLivros(quantidade);
+  }
+
+  public void appendHistoricoEmprestimo(Emprestimo emprestimo){
+    this.historicoEmprestimos.add(emprestimo);
   }
 }

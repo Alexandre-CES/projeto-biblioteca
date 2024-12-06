@@ -24,6 +24,8 @@ public class Emprestimo{
     usuario.getLivrosEmprestados().add(livro);
     
     livro.setIsDisponivel(false);
+
+    usuario.appendHistoricoEmprestimo(this);
   }
   
   //getters
