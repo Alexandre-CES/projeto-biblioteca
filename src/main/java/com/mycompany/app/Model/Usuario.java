@@ -2,7 +2,9 @@ package com.mycompany.app.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario extends Pessoa{
+import com.mycompany.app.Interface.AutorInterface;
+
+public class Usuario extends Pessoa implements AutorInterface{
   private int idade;
   private List<Emprestimo> historicoEmprestimos = new ArrayList<>();
 
@@ -40,5 +42,10 @@ public class Usuario extends Pessoa{
 
   public void appendHistoricoEmprestimo(Emprestimo emprestimo){
     this.historicoEmprestimos.add(emprestimo);
+  }
+
+  @Override
+  public void publicar(){
+    System.out.println("Usuário publicando...");
   }
 }

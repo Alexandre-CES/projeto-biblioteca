@@ -1,6 +1,8 @@
 package com.mycompany.app.Model;
 
-public class Livro{
+import com.mycompany.app.Interface.AutorInterface;
+
+public class Livro implements AutorInterface{
     private String titulo;
     private Autor autor;
     private String genero;
@@ -48,5 +50,10 @@ public class Livro{
         }else{
             System.out.println("the book is not avaible");
         }
+    }
+
+    @Override
+    public void publicar(){
+        System.out.println("Livro publicando...");
     }
 }
