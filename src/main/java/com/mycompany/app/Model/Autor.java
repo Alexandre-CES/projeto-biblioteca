@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.Model;
 import java.util.ArrayList;
 
 public class Autor extends Pessoa{

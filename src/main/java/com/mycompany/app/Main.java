@@ -5,6 +5,11 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Emprestimo;
+import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.Usuario;
+
 public class Main{
   public static void main(String[] args){
 

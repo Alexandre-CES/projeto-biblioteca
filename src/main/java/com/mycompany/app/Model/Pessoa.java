@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.Model;
 import java.util.ArrayList;
 
 public class Pessoa{
@@ -12,24 +12,24 @@ public class Pessoa{
   }
   
   //getters
-  protected String getNome(){
+  public String getNome(){
     return this.nome;
   }
   
-  protected ArrayList<Livro> getLivros(){
+  public ArrayList<Livro> getLivros(){
     return this.livros;
   }
   
-  protected int getQuantidadeMaxLivros(){
+  public int getQuantidadeMaxLivros(){
     return this.quantidadeMaxLivros;
   }
 
   //setters
-  protected void setLivros(ArrayList<Livro> livros){
+  public void setLivros(ArrayList<Livro> livros){
     this.livros = livros;
   }
   
-  protected void setQuantidadeMaxLivros(int quantidade){
+  public void setQuantidadeMaxLivros(int quantidade){
     this.quantidadeMaxLivros = quantidade;
   }
 

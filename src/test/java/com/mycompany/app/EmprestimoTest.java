@@ -1,5 +1,11 @@
 package com.mycompany.app;
 import org.junit.Test;
+
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Emprestimo;
+import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.Usuario;
+
 import static org.junit.Assert.*;
 import java.util.Date;
 
