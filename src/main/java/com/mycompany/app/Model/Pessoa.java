@@ -1,7 +1,9 @@
 package com.mycompany.app.Model;
 import java.util.ArrayList;
 
-public class Pessoa{
+import com.mycompany.app.Interface.Pessoavel;
+
+public class Pessoa implements Pessoavel{
   private String nome;
   private ArrayList<Livro> livros;
   private int quantidadeMaxLivros;
@@ -12,8 +14,14 @@ public class Pessoa{
   }
   
   //getters
+  @Override
   public String getNome(){
     return this.nome;
+  }
+
+  @Override
+  public void setnome(String nome){
+    this.nome = nome;
   }
   
   public ArrayList<Livro> getLivros(){

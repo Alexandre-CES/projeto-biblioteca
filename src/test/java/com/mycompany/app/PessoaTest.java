@@ -1,6 +1,7 @@
 package com.mycompany.app;
 import org.junit.Test;
 
+import com.mycompany.app.Interface.Pessoavel;
 import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Livro;
 import com.mycompany.app.Model.Pessoa;
@@ -13,7 +14,7 @@ public class PessoaTest{
     public void testGetNome(){
         // Cria uma instância da classe Pessoa
 
-        Pessoa pessoa = new Pessoa("Jess");
+        Pessoavel pessoa = new Pessoa("Jess");
 
         assertEquals("Jess", pessoa.getNome());
     }

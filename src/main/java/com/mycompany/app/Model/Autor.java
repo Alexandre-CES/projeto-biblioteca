@@ -1,18 +1,15 @@
 package com.mycompany.app.Model;
 import java.util.ArrayList;
 
-public class Autor extends Pessoa{
+import com.mycompany.app.Interface.Autoravel;
+
+public class Autor extends Pessoa implements Autoravel{
   private String nacionalidade;
 
   //constructor
   public Autor(String nome, String nacionalidade){
     super(nome);
     this.nacionalidade = nacionalidade;
-  }
-  
-  //getters
-  public String getNome(){
-    return super.getNome();
   }
   
   public ArrayList<Livro> getObrasPublicadas(){
@@ -44,5 +41,15 @@ public class Autor extends Pessoa{
 
   public void setLivros(ArrayList<Livro> livros){
     super.setLivros(livros);
+  }
+
+  @Override
+  public String getNome(){
+    return super.getNome();
+  }
+
+  @Override
+  public void setNome(String nome){
+    super.setnome(nome);
   }
 }
