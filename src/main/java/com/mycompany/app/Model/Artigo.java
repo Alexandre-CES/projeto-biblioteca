@@ -1,10 +1,25 @@
 package com.mycompany.app.Model;
 
-import com.mycompany.app.Interface.AutorInterface;
+public class Artigo extends Publicacao{
+  private String genero;
+  private boolean publicado;
 
-public class Artigo implements AutorInterface{
-    @Override
-    public void publicar(){
-      System.out.println("Artigo publicando...");
-    }
+  public Artigo(String titulo, Autor autor, String genero, boolean publicado){
+    super(titulo,autor);
+    this.genero = genero;
+    this.publicado = publicado;
+  }
+
+  public String getGenero(){
+    return this.genero;
+  }
+
+  public boolean isPublicado(){
+    return this.publicado;
+  }
+
+  @Override
+  public void validarPublicacao(){
+    System.out.println("Validando publicação de artigo...");
+  }
 }
