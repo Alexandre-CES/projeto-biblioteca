@@ -23,7 +23,7 @@ public class PessoaTest{
 
         //instantiate Pessoa and Autor
         Pessoa pessoa = new Pessoa("Pessoa");
-        Autor autor = new Autor("autor","inexistente");
+        Autor autor = new Autor("autor","inexistente",false);
 
         //instantiate two books  
         Livro livro1 = new Livro("Livro 1",autor,"livro");

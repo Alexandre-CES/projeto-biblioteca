@@ -3,16 +3,22 @@ import java.util.ArrayList;
 
 public class Autor extends Pessoa{
   private String nacionalidade;
+  private boolean isUser;
 
   //constructor
-  public Autor(String nome, String nacionalidade){
+  public Autor(String nome, String nacionalidade, boolean isUser){
     super(nome);
     this.nacionalidade = nacionalidade;
+    this.isUser = isUser;
   }
   
   //getters
   public String getNome(){
     return super.getNome();
+  }
+
+  public boolean getIsUser(){
+    return this.isUser;
   }
   
   public ArrayList<Livro> getObrasPublicadas(){
@@ -38,6 +44,10 @@ public class Autor extends Pessoa{
   }
 
   //setters
+  public void setIsUser(boolean isUser){
+    this.isUser = isUser;
+  }
+
   public void setMaxObras(int quantidade){
     super.setQuantidadeMaxLivros(quantidade);
   }

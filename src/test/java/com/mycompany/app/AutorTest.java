@@ -11,7 +11,7 @@ public class AutorTest {
     @Test
     public void testGetNomeNacionalidade(){
 
-        Autor autor = new Autor("autor","nacionalidade");
+        Autor autor = new Autor("autor","nacionalidade",false);
 
         assertEquals("autor", autor.getNome());
         assertEquals("nacionalidade", autor.getNacionalidade());
@@ -19,7 +19,7 @@ public class AutorTest {
 
     @Test
     public void testGetObrasPublicadas(){
-        Autor autor = new Autor("autor","nacionalidade");
+        Autor autor = new Autor("autor","nacionalidade",false);
 
         ArrayList<Livro> livros = new ArrayList<>();
 
@@ -36,7 +36,7 @@ public class AutorTest {
 
     @Test
     public void testGetObrasPublicadasPorGenero(){
-        Autor autor = new Autor("autor","nacionalidade");
+        Autor autor = new Autor("autor","nacionalidade",false);
 
         ArrayList<Livro> livros = new ArrayList<>();
 
@@ -52,5 +52,12 @@ public class AutorTest {
         livroDesejado.add(livro2);
 
         assertEquals(livroDesejado, autor.getObrasPublicadasPorGenero("desejado"));
+    }
+
+    @Test
+    public void testIsUser(){
+        Autor autor = new Autor("autor","nacionalidade",false);
+
+        assertEquals(false,autor.getIsUser());
     }
 }

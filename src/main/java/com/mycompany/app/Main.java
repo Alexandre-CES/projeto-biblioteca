@@ -9,11 +9,12 @@ import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Emprestimo;
 import com.mycompany.app.Model.Livro;
 import com.mycompany.app.Model.Usuario;
+import com.mycompany.app.Model.Artigo;
 
 public class Main{
   public static void main(String[] args){
 
-    Autor autor = new Autor("Antoine de Saint-Exupéry", "Francês");
+    Autor autor = new Autor("Antoine de Saint-Exupéry", "Francês", false);
     autor.setMaxObras(9);
 
     Livro livro = new Livro("O Pequeno Príncipe", autor, "Literatura infantil");
@@ -45,6 +46,8 @@ public class Main{
     } catch (ParseException e) {
       System.out.println("(1)Erro ao formatar a data: " + e.getMessage());
     }
+
+    Artigo artigo = new Artigo("Entendendo Compiladores", autor, "tecnologia", true);
   }
   
   public static void fazerEmprestimo(Livro livro, Usuario usuario, SimpleDateFormat sdf, Date dataRetirada, Date dataDevolucao){

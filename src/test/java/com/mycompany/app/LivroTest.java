@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class LivroTest {
     @Test
     public void testGetTituloAutorGenero(){
-        Autor autor = new Autor("autor","nacionalidade");
+        Autor autor = new Autor("autor","nacionalidade",false);
 
         Livro livro = new Livro("livro",autor,"genero");
 
@@ -20,7 +20,7 @@ public class LivroTest {
 
     @Test
     public void testIsDisponivel(){
-        Autor autor = new Autor("autor","nacionalidade");
+        Autor autor = new Autor("autor","nacionalidade",false);
 
         Livro livro = new Livro("livro",autor,"genero");
 

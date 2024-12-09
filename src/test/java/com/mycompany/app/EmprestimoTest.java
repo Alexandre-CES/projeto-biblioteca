@@ -14,7 +14,7 @@ public class EmprestimoTest {
     @Test
     public void testInstantiateEmprestimo(){
 
-        Autor autor = new Autor("autor","nacionalidade");
+        Autor autor = new Autor("autor","nacionalidade",false);
         Livro livro = new Livro("nome", autor,"genero");
         Usuario usuario = new Usuario("nome",18);
 

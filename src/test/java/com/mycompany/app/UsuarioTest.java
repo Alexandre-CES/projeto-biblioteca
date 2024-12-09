@@ -33,7 +33,7 @@ public class UsuarioTest {
     public void testGetLivrosEmprestados(){
         Usuario usuario = new Usuario("nome", 18);
 
-        Autor autor = new Autor("nome","nacionalidade");
+        Autor autor = new Autor("nome","nacionalidade",false);
         Livro livro = new Livro("livro", autor,"genero");
         ArrayList<Livro> livros = new ArrayList<>();
         livros.add(livro);
@@ -47,7 +47,7 @@ public class UsuarioTest {
     public void testGestHistoricoEmprestimos(){
         Usuario usuario = new Usuario("nome", 18);
 
-        Autor autor = new Autor("nome","nacionalidade");
+        Autor autor = new Autor("nome","nacionalidade",false);
         Livro livro = new Livro("livro", autor,"genero");
 
         Emprestimo emprestimo = new Emprestimo(livro,usuario, new Date(), new Date());
