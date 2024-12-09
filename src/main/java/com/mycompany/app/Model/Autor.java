@@ -1,9 +1,15 @@
 package com.mycompany.app.Model;
 import java.util.ArrayList;
 
-public class Autor extends Pessoa{
+import com.mycompany.app.Interface.PublicavelInterface;
+
+public class Autor extends Pessoa implements PublicavelInterface{
   private String nacionalidade;
   private boolean isUser;
+
+  public void publicar(){
+    System.out.println("publicando como autor");
+  }
 
   //constructor
   public Autor(String nome, String nacionalidade, boolean isUser){
