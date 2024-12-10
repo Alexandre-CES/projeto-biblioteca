@@ -1,0 +1,33 @@
+Exercício - SOLID
+ 
+Já implementamos o padrão decorator no nosso projeto. Agora, que tal tentar implementar o padrão 
+strategy no nosso projeto?
+
+Este padrão permite que o comportamento de uma classe seja alterado em tempo de execução, escolhendo
+entre diferentes estratégias (algoritmos) que podem ser intercambiáveis dentro do contexto da aplicação.
+Isso é particularmente útil para lidar com diferentes tipos de usuários 
+(por exemplo, usuários que são autores de artigos versus usuários que apenas fazem empréstimos de livros) 
+e suas ações específicas.
+
+É importante dizer que essa aplicação tem fins apenas didáticos, NUNCA devemos escolher um padrão
+ para implementar no nosso projeto mas sim, escolher o padrão que resolva um problema nosso.
+
+------------------------------------------------------------------------------------------------
+
+Voltando a atividade, para facilitar, vamos listar como faremos essa implementação:
+
+1.Reaproveitar a interface PublicavelInterface que tem o método publicar()
+
+2.Criar Classes Concretas de Estrategia: Implementam diferentes estratégias de publicação.
+
+    -EstrategiaPublicacaoLivro: Específica para publicação de livros.s
+    -EstrategiaPublicacaoArtigo: Específica para publicação de artigos.
+
+3. Modificação na classe UsuarioDecorator (ou Autor): Incorpora uma referência a EstrategiaPublicacao 
+para determinar como a publicação deve ser realizada.
+
+Atributo: EstrategiaPublicacao estrategiaPublicacao;
+
+Método: setEstrategiaPublicacao(EstrategiaPublicacao estrategia), publicar()
+
+4. Crie uma classe de testes para validar a lógica.

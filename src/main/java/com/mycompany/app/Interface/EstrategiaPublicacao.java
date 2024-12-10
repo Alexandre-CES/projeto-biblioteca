@@ -1,5 +1,5 @@
 package com.mycompany.app.Interface;
 
-public interface PublicavelInterface {
+public interface EstrategiaPublicacao {
     void publicar();
 }

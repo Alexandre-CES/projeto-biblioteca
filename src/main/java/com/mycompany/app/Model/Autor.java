@@ -1,9 +1,9 @@
 package com.mycompany.app.Model;
 import java.util.ArrayList;
 
-import com.mycompany.app.Interface.PublicavelInterface;
+import com.mycompany.app.Interface.EstrategiaPublicacao;
 
-public class Autor extends Pessoa implements PublicavelInterface{
+public class Autor extends Pessoa implements EstrategiaPublicacao{
   private String nacionalidade;
   private boolean isUser;
 

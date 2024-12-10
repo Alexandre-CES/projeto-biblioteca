@@ -1,16 +1,20 @@
 package com.mycompany.app.Model;
 
-import com.mycompany.app.Interface.PublicavelInterface;
+import com.mycompany.app.Interface.EstrategiaPublicacao;
 
-public class UsuarioDecorator implements PublicavelInterface{
-    private PublicavelInterface usuario;
+public class UsuarioDecorator implements EstrategiaPublicacao{
+    private EstrategiaPublicacao estrategiaPublicacao;;
 
-    public UsuarioDecorator(PublicavelInterface usuario){
-        this.usuario = usuario;
+    public void setEstrategiaPublicacao(EstrategiaPublicacao estrategia){
+        this.estrategiaPublicacao = estrategia;
     }
 
-    public void publicar(){
-        usuario.publicar();
-        System.out.println("Publicando como usuário...");
+    @Override
+    public void publicar() {
+        if (this.estrategiaPublicacao == null) {
+            System.out.println("Nenhuma estratégia definida para publicação.");
+        } else {
+            this.estrategiaPublicacao.publicar();
+        }
     }
 }
